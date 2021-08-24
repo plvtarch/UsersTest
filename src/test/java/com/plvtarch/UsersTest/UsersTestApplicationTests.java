@@ -36,7 +36,7 @@ class UsersTestApplicationTests {
 	@Test
 	public void testFindUserByName() {
 		List<User> user = usersRepository.findByName("Andrey");
-		assertNotNull(user);
+		assertNotNull(user.stream().findFirst());
 	}
 
 }
